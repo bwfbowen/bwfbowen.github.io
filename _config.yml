@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Bowen Fang"
   avatar           : "short_hair.jpeg"
-  bio              : "Hello! I have a keen interest in field of Reinforcement Learning with a focus on planning ability, and I am intrigued by the intersection of OR and RL and always seeking ways to explore this synergy. In addition, I am particularly passionate about Monte Carlo Tree Search (MCTS)-based Reinforcement Learning, from where my interest also extends to the development of more efficient neural networks with improved representation abilities."
+  bio              : "Hello! I am a MS student in Operations Research at Columbia University. Right now, I'm on a mission to get MCTS-based RL into every RL textbook, and make it a go-to tool for folks doing RL research and practice."
   location         : "New York, NY, United States"
   employer         :
   pubmed           :  # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
@@ -102,7 +102,7 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "https://www.linkedin.com/in/bowenfang/"
+  linkedin         : "bowenfang"
   orcid            : # "http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :
