@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Bowen Fang"
-  avatar           : "profile.png"
+  avatar           : "short_hair.jpeg"
   bio              : "Hello! I have a keen interest in field of Reinforcement Learning with a focus on planning ability, and I am intrigued by the intersection of OR and RL and always seeking ways to explore this synergy. In addition, I am particularly passionate about Monte Carlo Tree Search (MCTS)-based Reinforcement Learning, from where my interest also extends to the development of more efficient neural networks with improved representation abilities."
   location         : "New York, NY, United States"
   employer         :
