@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Bowen Fang / Homepage"
 title_separator          : "-"
 name                     : &name "Bowen Fang"
-description              : &description "Master student at Columbia University, interested in MCTS and Transformers"
+description              : &description "Hello! I have a keen interest in field of Reinforcement Learning with a focus on planning ability, and I am intrigued by the intersection of OR and RL and always seeking ways to explore this synergy. In addition, I am particularly passionate about Monte Carlo Tree Search (MCTS)-based Reinforcement Learning, from where my interest also extends to the development of more efficient neural networks with improved representation abilities."
 url                      : https://bwfbowen.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "bwfbowen/bwfbowen.github.io"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Bowen Fang"
   avatar           : "profile.png"
-  bio              : "Master student at Columbia University, interested in MCTS and Transformers"
+  bio              : "Hello! I have a keen interest in field of Reinforcement Learning with a focus on planning ability, and I am intrigued by the intersection of OR and RL and always seeking ways to explore this synergy. In addition, I am particularly passionate about Monte Carlo Tree Search (MCTS)-based Reinforcement Learning, from where my interest also extends to the development of more efficient neural networks with improved representation abilities."
   location         : "New York, NY, United States"
   employer         :
   pubmed           :  # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
@@ -102,7 +102,7 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
+  linkedin         : "https://www.linkedin.com/in/bowenfang/"
   orcid            : # "http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :
