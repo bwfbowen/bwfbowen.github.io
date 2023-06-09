@@ -21,8 +21,8 @@ My Interests
 
 My Journey
 ======
-- Bachelor of Management in Big Data Management and Application, Peking University, 2018
-- Master of Science in Operations Research, Columbia University in the City of New York, 2022
+- Bachelor of Management in Big Data Management and Application, Peking University, 2022
+- Master of Science in Operations Research, Columbia University in the City of New York, 2023
 
 I started my academic journey at Peking University, where I studied Big Data Management and Application. During this time, I developed a strong interest in Optimization and Reinforcement Learning, which led me to join the Knowledge Discovery Lab and do research under the goal-based RL topics, during which time I also became an intern for high frequency trading startup AI Topia to seek ways to optimize the execution of orders.
 

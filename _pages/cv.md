@@ -9,25 +9,42 @@ redirect_from:
 
 {% include base_path %}
 
+[Download My CV]() <br> [Download My Resume]()
+
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* B.S. in Big Data Management and Application, Peking University, 2022
+* M.S. in Operations Research, Columbia University in the City of New York, 2023
 
-Work experience
+Work Experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* Research Assistant, Spring 2021 - July 2022
+  * Knowledge Discovery Lab, Peking University
+  * Supervisor: Professor [Meng Fan](https://www.im.pku.edu.cn/szll/xxzzyxxsjyjs/mf/index.htm)
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Research Assistant, Dec 2022 - present
+  * Dept. of Civil Engineering, Columbia University
+  * Supervisor: Professor [Sharon Di](https://sharondi-columbia.wixsite.com/ditectlab/home-1)
   
-Skills
+Teaching Experience
+======
+<ul>{% for post in site.teaching %}
+    {% include archive-single-cv.html %}
+  {% endfor %}</ul>
+    
+Internship Experience
+======
+* Part-time Data Scientist, Aug 2022 - Dec 2022
+  * MathWorks
+
+* ML Researcher, Sep 2021 - Jun 2022
+  * AI TOPIA
+
+* Software Engineering, Jul 2021 - Sep 2021
+  * Nomura Securities Orient International
+
+
+<!-- Skills
 ======
 * Skill 1
 * Skill 2
@@ -56,4 +73,4 @@ Teaching
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* Currently signed in to 43 different slack teams -->

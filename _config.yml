@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Bowen Fang"
   avatar           : "short_hair.jpeg"
-  bio              : "Hello! I am a MS student in Operations Research at Columbia University. Right now, I'm on a mission to make it a go-to tool for folks doing RL research and practice, and get MCTS-based RL into every RL textbook."
+  bio              : "Hello! I am a MS student in Operations Research at Columbia University. Right now, I'm working to make MCTS-based RL a go-to tool for folks doing RL research and practice, and get it into every RL textbook."
   location         : "New York, NY, United States"
   employer         :
   pubmed           :  # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
