@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-[Download My CV]() <br> [Download My Resume]()
+[Download My CV](https://bwfbowen.github.io/files/BowenFang_23fall_phdcv.pdf) <br> [Download My Resume](https://bwfbowen.github.io/files/BowenFang_23fall.pdf)
 
 Education
 ======

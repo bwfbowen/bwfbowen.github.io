@@ -1,6 +1,6 @@
 ---
 title: "Autonomous Learning of Physical Environment through Neural Tree Search"
-excerpt: "•	Proposed a MCTS-based reinforcement learning algorithm to perform active slam. <br/><img src='/images/nts_snt.jpeg'>"
+excerpt: "•	Proposed a MCTS-based reinforcement learning algorithm to perform active slam. <br/><img src='/images/nts_snt.jpeg' width='500' height='300'>"
 collection: portfolio
 ---
 
