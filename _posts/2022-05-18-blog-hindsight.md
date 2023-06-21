@@ -10,7 +10,7 @@ tags:
 
 This week, I will share a paper published by OpenAI at NeurIPS 2017. The ideas presented in this paper are quite insightful, and it tackles a complex problem using only simple algorithmic improvements. I gained significant inspiration from this paper. At the end, I will also provide a brief implementation of HER (Hindsight Experience Replay).
 
-> Original Paper Information <br> **Title**: Hindsight experience replay <br> **Author**: Marcin Andrychowicz, Filip Wolski, Alex Ray, Jonas Schneider, Rachel Fong, Peter Welinder, Bob McGrew, Josh Tobin, OpenAI Pieter Abbeel, Wojciech Zaremba <br> **Code**: https://github.com/openai/baselines/blob/master/baselines/her/README.md
+> Original Paper Information <br> **Title**: Hindsight experience replay <br> **Author**: Marcin Andrychowicz, Filip Wolski, Alex Ray, Jonas Schneider, Rachel Fong, Peter Welinder, Bob McGrew, Josh Tobin, OpenAI Pieter Abbeel, Wojciech Zaremba <br> **Code**: [https://github.com/openai/baselines/blob/master/baselines/her/README.md](https://github.com/openai/baselines/blob/master/baselines/her/README.md)
 
 # Background
 The combination of reinforcement learning and neural networks has achieved success in various domains involving sequential decision-making, such as Atari games, Go, and robot control tasks.
