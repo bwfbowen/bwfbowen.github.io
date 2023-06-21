@@ -10,8 +10,6 @@ tags:
 
 This week, I will share a paper published by OpenAI at NeurIPS 2017. The ideas presented in this paper are quite insightful, and it tackles a complex problem using only simple algorithmic improvements. I gained significant inspiration from this paper. At the end, I will also provide a brief implementation of HER (Hindsight Experience Replay).
 
-<img src='/images/bit-flipping.png' width='500' height='300'>
-
 > Original Paper Information <br> **Title**: Hindsight experience replay <br> **Author**: Marcin Andrychowicz, Filip Wolski, Alex Ray, Jonas Schneider, Rachel Fong, Peter Welinder, Bob McGrew, Josh Tobin, OpenAI Pieter Abbeel, Wojciech Zaremba <br> **Code**: https://github.com/openai/baselines/blob/master/baselines/her/README.md
 
 # Background
@@ -27,7 +25,7 @@ The paper introduces a technique called Hindsight Experience Replay (HER), which
 ## 1. An introducing example
 Consider a coin flipping problem with a total of $n$ coins. The configuration of heads or tails for these $n$ coins represents a state, and the state space is denoted as $S=\{0,1\}^n$. The action space is $A=\{0,1,...,n-1\}$, where $i$ denotes flipping the i-th coin. In each episode, an initial state and a target state are uniformly and randomly selected. The RL policy flips these $n$ coins, and if the resulting state differs from the target state, a reward of $-1$ is obtained, i.e., $r_g(s,a)=-[s\neq g]$. Here, $g$ represents the target state.
 
-When $n>40$, reinforcement learning strategies almost always fail because the policy rarely encounters rewards other than $-1$. Relying on random action exploration in such a large state space is impractical. A common approach in reinforcement learning is to design a reward function that guides the policy towards the goal. In this example, $r_g(s,a)=||s-g||^2$ can solve the problem. However, designing a reward function can be challenging, especially when facing more complex problems.
+When $n>40$, reinforcement learning strategies almost always fail because the policy rarely encounters rewards other than $-1$. Relying on random action exploration in such a large state space is impractical. A common approach in reinforcement learning is to design a reward function that guides the policy towards the goal. In this example, $r_g(s,a)=\|s-g\|^2$ can solve the problem. However, designing a reward function can be challenging, especially when facing more complex problems.
 
 The solution proposed in this paper does not require any domain-specific knowledge. Consider an episode that goes through a sequence of states $s_1, s_2, ..., s_T$, and a target $g\neq s_1, s_2, ..., s_T$ that has not been achieved. In each step of this episode, a reward of $-1$ is obtained. The method described in the paper involves replacing $g$ with $s_T$ and adding the modified episode to the replay buffer. This approach introduces paths with rewards different from $-1$, making the learning process simpler.
 
@@ -36,7 +34,8 @@ Figure 1 compares the performance of plain DQN and DQN+HER in this environment. 
 <figure>
   <img
   src="/images/bit-flipping.png"
-  alt="bit-flipping">
+  alt="bit-flipping"
+  width='500' height='300'>
   <figcaption style='text-align: center'>Figure 1. Bit-flipping experiment w/o HER </figcaption>
 </figure>
 
@@ -62,16 +61,12 @@ With HER, one task is to define the "subset of other goals." The simplest approa
 It's worth noting that the algorithm of HER differs from a standard off-policy algorithm in a couple of ways. Firstly, the policy's input is a concatenation of the state vector $s$ and the goal vector $g$. Secondly, the Replay Buffer stores not only the transition information generated through interactions with the environment but also the transition information after replacing the goal with a new goal $g'$. These pieces of information are collectively used for subsequent training.
 
 # Experiment
-The paper's experiments can be referenced in the following video:
-
-https://sites.google.com/site/hindsightexperiencereplay/
+The paper's experiments can be referenced in the following [video](https://sites.google.com/site/hindsightexperiencereplay/):
 
 The organization of the experimental section in the paper is as follows: The first part introduces the reinforcement learning environments used. Subsequently, each section explores the performance differences between DDPG with and without HER, the performance in single-goal scenarios, the impact of designing additional reward functions on performance, the influence of different sampling methods of goals on policy performance, and finally, the deployment of the algorithm on real robots.
 
 ## 1. Environment
-The paper used `Mujoco` and introduced its own environment, which has been made publicly available in the OpenAI Gym:
-
-https://gym.openai.com/envs/#robotics
+The paper used `Mujoco` and introduced its own environment, which has been made publicly available in the [OpenAI Gym](https://gym.openai.com/envs/#robotics)
 
 <figure>
   <img
@@ -96,7 +91,7 @@ The state is represented by the Mujoco physics engine, including the angles and 
 
 **Goal**:
 
-The goal is the desired position of the object, with a fixed tolerance $\epsilon$. For example, $G=R^3$, where $f_g(s)=[|g-s_{object}|\leq\epsilon]$, and $s_{object}$ represents the position of the object in state $s$. The mapping function is defined as $m(s)=s_{object}$.
+The goal is the desired position of the object, with a fixed tolerance $\epsilon$. For example, $G=R^3$, where $f_g(s)=[\|g-s_{object}\|\leq\epsilon]$, and $s_{object}$ represents the position of the object in state $s$. The mapping function is defined as $m(s)=s_{object}$.
 
 **Reward**:
 
@@ -172,7 +167,7 @@ The contributions of this paper is that:
 This paper proposes an innovative method that enables reinforcement learning algorithms to learn complex task policies from simple binary sparse rewards. This approach can be combined with any off-policy algorithm.
 
 # Review comments
-From NeurIPS (https://proceedings.neurips.cc/paper/2017/file/453fadbd8a1a3af50a9df4df899537b5-Reviews.html), one can see the questions raised by the reviewers regarding the original paper before its acceptance. Among them, one reasonable suggestion is to explore the combination of HER with a proven effective reward function for evaluating the performance of the combination of HER with reward engineering.
+From [NeurIPS review](https://proceedings.neurips.cc/paper/2017/file/453fadbd8a1a3af50a9df4df899537b5-Reviews.html), one can see the questions raised by the reviewers regarding the original paper before its acceptance. Among them, one reasonable suggestion is to explore the combination of HER with a proven effective reward function for evaluating the performance of the combination of HER with reward engineering.
 
 # Pytorch implementation
 The article is very clear, with interesting ideas and a simple implementation. I personally really like this paper.
@@ -500,7 +495,7 @@ def train(agent: DQN, env, num_episodes: int = 500, num_timesteps: int = 300, ba
         try:
             goal = kwargs['goal']
         except KeyError:
-            raise ValueError('需要提供env goal')
+            raise ValueError('No env goal has been provided.')
 
     if agent.name == 'DQN':
         steps = 0
@@ -544,7 +539,7 @@ def train(agent: DQN, env, num_episodes: int = 500, num_timesteps: int = 300, ba
                 if steps % update_every == 0:
                     agent.train(batch_size)
             if require_epsilon_explore:
-                agent.epsilon -= (1/num_episodes) * epsilon_decay #逐渐确定，减小探索
+                agent.epsilon -= (1/num_episodes) * epsilon_decay # more exploitation
         env.close()
 
     return Return_list
@@ -562,7 +557,7 @@ def evaluate(agent, env, num_timesteps: int = 200, require_render=True, **kwargs
         try:
             goal = kwargs['goal']
         except KeyError:
-            raise ValueError('需要提供env goal')
+            raise ValueError('No env goal has been provided.')
 
     if agent.name == 'DQN':
         # best action
