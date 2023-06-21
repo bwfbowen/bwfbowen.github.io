@@ -38,10 +38,68 @@ The last step is to mini-batch along the diagonal for consecutive graphs to crea
 
 # Method
 ## Descriptive Analysis: Transaction Graphs Comparison
+The transaction networks are constructed based on two months’ data, August and October, one month before and one month after “The Merge.” According to the field ‘from\_address’ and ‘to\_address’ in the datasets, we construct two directed and weighted graphs. Each edge represents the transaction relationship between two users. By aggregating features from our data, we also track some attributes of the transaction relationships, including the total transaction times, transaction value, and minimum gas price between two users.
+
+Based on the two networks, we compared metrics as follows: node degrees, edge attribute distributions, and graph centralization, which measure the extent to which one or more nodes occupy the central positions of a graph.
 
 ## Predictive Analysis: Gas Price Prediction
+### Proposed model: ETHGT
+We proposed a novel model named ETHGT, whose structure is shown at fig below. The model applies the same Graph Attention Convolution Blocks for a consecutive of graphs, the extracted features are passed through global mean pooling to get the embedding for the transaction graph. The embedding from each timestep is then fed to causal Transformer. The output is a single float number which represents the estimate lowest gas price in the next serval minutes.
+
+<figure>
+  <img
+  src="/images/model_struct.png"
+  alt="The structure of proposed model.">
+  <figcaption style='text-align: center'> The structure of proposed model.</figcaption>
+</figure>
+
 ### Label
 to label the data. For each block, only transactions processed were recorded, so that the minimum gas price in each block is the lowest gas price for the transaction to be considered(in this block). After aggregation and normalization, we compute the minimum gas price $m_i$ within each graph $i$. Then we compute $y_i=\min_{k\in\{i+1,i+2,...,i+l\} )}m_k $, which is the minimum of consecutive minimum gas prices.
 # Result
 ## Analysis on "The Merge"
+
+Through d3.js, we conduct visualization of two smaller subgraphs of the original Pre- and Post-Merge graphs, where we can discern patterns and gain insights in terms of the overall transaction structure on Ethereum. The subgraphs are obtained through setting thresholds of at least 30 degree and at least 10 transaction times, and filtering the original graphs.
+
+<figure>
+  <img
+  src="/images/Pre-Merge.png"
+  alt="Visualization of the Pre-Merge Graph (Node size represents its transaction times).">
+  <figcaption style='text-align: center'> Visualization of the Pre-Merge Graph (Node size represents its transaction times).</figcaption>
+  <img
+  src="/images/Post-Merge.png"
+  alt="Visualization of the Post-Merge Graph (Node size represents its transaction times).">
+  <figcaption style='text-align: center'> Visualization of the Post-Merge Graph (Node size represents its transaction times).</figcaption>
+</figure>
+
+Figures above show that there is no significant change in terms of the overall transaction structure on Ethereum. The transaction graph is divided into several components. Among them, the largest component will have an obvious central node, and many other nodes around it will develop transaction relationships with it. A possible guess is that this node is an important financial institution, who attracts many individual or organizational users to conduct transaction with it on Ethereum. In terms of the other components of the graph, some have a center and present a "core-periphery" structure, while others are more decentralized and every node enjoy quite equal status in the transaction structure.
+
+<figure>
+  <img
+  src="/images/edge_gas_price_dist_ccdf.png"
+  alt="Cumulative Distribution Function (CDF) of Minimum Gas Price between Users (Log Scale).">
+  <figcaption style='text-align: center'> Cumulative Distribution Function (CDF) of Minimum Gas Price between Users (Log Scale).</figcaption>
+</figure>
+
+In Fig above, it can be seen that at a low price, the Post-Merge red line is below the Pre-Merge blue line, which suggests that the proportion of transactions with low gas price decreased after The Merge. The trend is verified by the increased average gas price from the Pre-Merge 14.99 to the Post-Merge 19.11 (unit: GWei). This indicates that after The Merge, there may be a growing extra cost paid for every transaction.
+
 ## Gas Price Prediction
+To evaluate the performance of the proposed model, we used Mean Square Error(MSE) $MSE=\frac{1}{N}\sum_{i=1}^N(y_i-\hat{y}_i)^2$. After 500 episodes, we observed that the train loss curve and validation loss curve both drop as the training continues. We apply the trained model to predict on the test dataset, where we discovers that the predicted value is close to the real value and has the similar trend as the real value. Therefore, the model can provide informative gas price prediction for users.
+
+<figure>
+  <img
+  src="/images/train_loss_tgan.png"
+  alt="Train loss curve of ETHGT.">
+  <figcaption style='text-align: center'> Train loss curve of ETHGT.</figcaption>
+  <img
+  src="/images/val_loss_tgan.png"
+  alt="Val loss curve of ETHGT.">
+  <figcaption style='text-align: center'> Val loss curve of ETHGT.</figcaption>
+  <img
+  src="/images/pred_tgan.png"
+  alt="Prediction on the test dataset.">
+  <figcaption style='text-align: center'> Prediction on the test dataset.</figcaption>
+</figure>
+
+For more details, please see my report and code:
+[Report](https://www.graphen.ai/course/bigdata/reports/202212-22.pdf),
+[Code](https://github.com/Sapphirine/202212-22-Comparative-Graph-Analysis-on-Ethereum-The-Merge-and-Gas-Price-Prediction)
