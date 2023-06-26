@@ -32,7 +32,7 @@ Model-free Deep Reinforcement Learning suffers from sample inefficiency. Model r
 
 $$ \attn(Q,K,V)=D^{-1} AV $$
 
-Where $ A=\exp⁡(QK^T/\sqrt{d}), D=\diag(A\mathbf{1}_L) $ . 
+Where $ A=\exp⁡(\frac{QK^T}{\sqrt{d}}), D=\diag(A\mathbf{1}_L)$ . 
 The time and space complexity are $ O(L^2 d) $ and $ O(L^2+Ld) $ respectively.
 FAVOR+ (Choromanski et al., 2020) uses a random feature map 
 $ \phi:\mathbb{R}^d\rightarrow\mathbb{R}_+^r $ 
