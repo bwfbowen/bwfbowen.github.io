@@ -44,15 +44,14 @@ Result
 ======
 Comparision experiments on Gibson exploration task against Neural SLAM are proposed. 
 
+<img src="/images/cmptable.png" alt="nslam" style="margin-left: auto; margin-right: auto; display: block;">
 <figure>
   <img
   src="/images/cmpnts.png"
   alt="comparison">
-  <img
-  src="/images/cmptable.png"
-  alt="nslam">
   <figcaption style='text-align: center'> Comparison of NTS with different actions and NSLAM</figcaption>
 </figure>
+
 
 As displayed, NTS 10 realizes competitive performance to Neural SLAM with 30 episodes, the latter requires over 70 episodes and vectorized environment, which demonstrates the efficiency of NTS and the gain from planning. However, NTS 4 is not comparable to NTS 10 and Neural SLAM, and has higher variance. One possible reason is that the robot is blocked by some obstacle and unable to make small adjustment. For example, entering a door.
 

@@ -16,9 +16,7 @@ Q-learning algorithm with convolutional neural network, whose input is raw pixel
 Transformers were proposed originally to process sets instead of sequence since it produces the same output if the input is permuted. To apply Transformers to sequences, a positional encoding is added. Pre-Layer Normalization (Xiong et al., 2020) is used(Figure 1), which is a version of the Transformer that applies Layer Normalization first in each residual block. Pre-LN is more stable for training Transformers, which supports better gradient flow and removes the necessity of a warm-up stage.
 For the implementation, the Feed Forward block is two fully connected layers with GELU activation. The Feed Forward block introduces much more parameters while the gain is uncertain. Therefore, simplified version of Transformer Encoder with simply attention blocks is tested against the full Transformer Encoder.
 
-<img
-  src="/images/trans-lav.png"
-  alt="One Transformer Encoder layer">
+<img src="/images/trans-lav.png" alt="One Transformer Encoder layer" style="margin-left: auto; margin-right: auto; display: block;">
 <figure>
   <figcaption style='text-align: center'> Figure 1. One Transformer Encoder layer </figcaption>
 </figure>
@@ -34,7 +32,7 @@ Model-free Deep Reinforcement Learning suffers from sample inefficiency. Model r
 
 $$ \attn(Q,K,V)=D^{-1} AV $$
 
-Where $ A=\exp⁡(QK^T/\sqrt{d})$ , $ D=\diag(A\mathbf{1}_L) $ . 
+Where $ A=\exp⁡(QK^T/\sqrt{d}), D=\diag(A\mathbf{1}_L) $ . 
 The time and space complexity are $ O(L^2 d) $ and $ O(L^2+Ld) $ respectively.
 FAVOR+ (Choromanski et al., 2020) uses a random feature map 
 $ \phi:\mathbb{R}^d\rightarrow\mathbb{R}_+^r $ 

@@ -31,11 +31,8 @@ The solution proposed in this paper does not require any domain-specific knowled
 
 Figure 1 compares the performance of plain DQN and DQN+HER in this environment. DQN without HER can solve problems with at most 13 coins, while DQN+HER can easily handle environments with 50 coins.
 
+<img src="/images/bit-flipping.png" alt="bit-flipping" width="500" height="300" style="margin-left: auto; margin-right: auto; display: block;">
 <figure>
-  <img
-  src="/images/bit-flipping.png"
-  alt="bit-flipping"
-  width='500' height='300'>
   <figcaption style='text-align: center'>Figure 1. Bit-flipping experiment w/o HER </figcaption>
 </figure>
 
