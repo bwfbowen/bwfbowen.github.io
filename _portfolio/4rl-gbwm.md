@@ -22,11 +22,10 @@ To successfully solve the problem with RL, however, is not as obvious as one mig
 </figure>
 
 # How did we implement it?
-
-<figure>
-  <img
+<img
   src="/images/dp-gbwm.png"
   alt="DP result of GBWM">
+<figure>
   <figcaption style='text-align: center'> The Dynamic Programming result of GBWM. </figcaption>
 </figure>
 

@@ -16,23 +16,34 @@ Q-learning algorithm with convolutional neural network, whose input is raw pixel
 Transformers were proposed originally to process sets instead of sequence since it produces the same output if the input is permuted. To apply Transformers to sequences, a positional encoding is added. Pre-Layer Normalization (Xiong et al., 2020) is used(Figure 1), which is a version of the Transformer that applies Layer Normalization first in each residual block. Pre-LN is more stable for training Transformers, which supports better gradient flow and removes the necessity of a warm-up stage.
 For the implementation, the Feed Forward block is two fully connected layers with GELU activation. The Feed Forward block introduces much more parameters while the gain is uncertain. Therefore, simplified version of Transformer Encoder with simply attention blocks is tested against the full Transformer Encoder.
 
-<figure>
-  <img
+<img
   src="/images/trans-lav.png"
   alt="One Transformer Encoder layer">
+<figure>
   <figcaption style='text-align: center'> Figure 1. One Transformer Encoder layer </figcaption>
 </figure>
 
 ## FAVOR+ Mechanism
+
 $$ 
 \newcommand{\attn}{\mathrm{Attention}} 
 \newcommand{\diag}{\mathrm{diag}}
 $$
+
 Model-free Deep Reinforcement Learning suffers from sample inefficiency. Model requires millions of training steps to learn proper policies from environments. Therefore, models with high complexity could fail to learn policies with limited resources. The canonical Transformer (Vaswani et al., 2017) uses dot-product attention, which takes $ Q,K,V\in \mathbb{R}^{L\times d}$ as input where $L$ is the length of the input sequence and $d$ is the dimension the latent representation. The bidirectional dot-product attention has the form:
-$$\attn(Q,K,V)=D^{-1} AV$$
-Where $A=\exp⁡(QK^T/\sqrt{d})$, $D=\diag(A\mathbf{1}_L)$. The time and space complexity are $O(L^2 d)$ and $O(L^2+Ld)$ respectively.
-FAVOR+ (Choromanski et al., 2020) uses a random feature map $\phi:\mathbb{R}^d\rightarrow\mathbb{R}_+^r$ (for $r>0$) such that the kernel $K: \mathbb{R}^d\times\mathbb{R}^d\rightarrow\mathbb{R}_+$ has:
-$$K(x,y)=\mathbb{E}[ϕ(x)^T ϕ(y)]$$
+
+$$ \attn(Q,K,V)=D^{-1} AV $$
+
+Where $ A=\exp⁡(QK^T/\sqrt{d})$ , $ D=\diag(A\mathbf{1}_L) $ . 
+The time and space complexity are $ O(L^2 d) $ and $ O(L^2+Ld) $ respectively.
+FAVOR+ (Choromanski et al., 2020) uses a random feature map 
+$ \phi:\mathbb{R}^d\rightarrow\mathbb{R}_+^r $ 
+(for $ r>0 $) such that the kernel 
+$ K: \mathbb{R}^d\times\mathbb{R}^d\rightarrow\mathbb{R}_+$ 
+has:
+
+$$ K(x,y)=\mathbb{E}[ϕ(x)^T ϕ(y)] $$
+
 The random feature map $ϕ$ leads to the more efficient attention mechanism:
 $$\hat\attn(Q,K,V)=(\hat D^{-1}) (Q' ((K' )^T V))$$
 Where $\hat{D}=\diag(Q' ((K' )^T \mathbf{1}_L ))$.
@@ -88,28 +99,7 @@ All experiments were conducted on Google Colab with GPU backend and monitored wi
 From the episode reward curves the observation is that the light attention vision module performs similarly with vanilla Convolution while being more stable and reaching slightly higher average episode reward but requires longer forward time. The full Transformer Encoder with fast attention and regular attention perform similarly with each other while the fast attention version performs better. And both of the full Encoders need more training steps.
 
 <tablecaption>Table 1. Parameters</tablecaption>
-| Parameter   | | Value |
-| :------ |:---------:| :-------: |
-|| Light Attention Vision ||
-| Embedding dim || 64   |
-| Hidden dim || 128 |
-| Num of heads || 8 |
-| Num of Encoder layers || 2 |
-| MLP Hidden dim || 256 | 
-| Batch size || 256 |
-| Optimizer || Adam |
-| Learning rate || 3e-4 |
-|| Q-Learning ||
-| Boltzmann temperature || 0.015 |
-| Soft update tau || 1 |
-| Reward N step || 5 |
-| Reward N step gamma || 0.99 |
-| Train every n steps || 4 |
-| Update every n steps || 1e4 |
-|| Prioritized Replay Buffer ||
-| Capacity || 1e6 | 
-| Alpha || 0.6 | 
-| Warmup || 5e4 |
+<img src="/images/param-lav.png" alt="Parameters" width='500' height='300'>
 
 # Discussion
 
