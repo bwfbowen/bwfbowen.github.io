@@ -30,20 +30,25 @@ $$
 
 Model-free Deep Reinforcement Learning suffers from sample inefficiency. Model requires millions of training steps to learn proper policies from environments. Therefore, models with high complexity could fail to learn policies with limited resources. The canonical Transformer (Vaswani et al., 2017) uses dot-product attention, which takes $ Q,K,V\in \mathbb{R}^{L\times d}$ as input where $L$ is the length of the input sequence and $d$ is the dimension the latent representation. The bidirectional dot-product attention has the form:
 
-$$ \attn(Q,K,V)=D^{-1} AV $$
-
-Where $ A=\exp⁡(\frac{QK^T}{\sqrt{d}}), D=\diag(A\mathbf{1}_L)$ . 
-The time and space complexity are $ O(L^2 d) $ and $ O(L^2+Ld) $ respectively.
+$$\begin{align}
+\attn(Q,K,V) & =D^{-1} AV, \\
+A & =\exp⁡(\frac{QK^T}{\sqrt{d}}), \\
+D & =\diag(A\mathbf{1}_L).
+\end{align}$$
+ 
+The time and space complexity are $O(L^2 d)$ and $O(L^2+Ld)$ respectively.
 FAVOR+ (Choromanski et al., 2020) uses a random feature map 
 $ \phi:\mathbb{R}^d\rightarrow\mathbb{R}_+^r $ 
 (for $ r>0 $) such that the kernel 
-$ K: \mathbb{R}^d\times\mathbb{R}^d\rightarrow\mathbb{R}_+$ 
+$ K: \mathbb{R}^d\times\mathbb{R}^d\rightarrow\mathbb{R}_+ $ 
 has:
 
 $$ K(x,y)=\mathbb{E}[ϕ(x)^T ϕ(y)] $$
 
 The random feature map $ϕ$ leads to the more efficient attention mechanism:
+
 $$\hat\attn(Q,K,V)=(\hat D^{-1}) (Q' ((K' )^T V))$$
+
 Where $\hat{D}=\diag(Q' ((K' )^T \mathbf{1}_L ))$.
 This attention mechanism has time and space complexity $O(Lrd)$ and $O(Lr+Ld+rd)$ respectively (see also Figure 2).
 
