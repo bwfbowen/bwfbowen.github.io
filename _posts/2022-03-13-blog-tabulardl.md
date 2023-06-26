@@ -878,3 +878,5 @@ print("  Params: ")
 for key, value in trial.params.items():
     print("    {}: {}".format(key, value))
 ```
+
+Check my post on Discovery Lab: [【每周一读】重提表格数据上的深度学习](https://mp.weixin.qq.com/s/iFX9CiEFmIn9hARKIwGtUQ)
