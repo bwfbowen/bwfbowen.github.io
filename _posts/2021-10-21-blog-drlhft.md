@@ -66,7 +66,7 @@ The calculation of trading profit, as defined in this paper, is based on the pos
 
 $$R_{l/s}=p^{best}_{a/b,\tau}-p^{best}_{b/a,\tau-t}$$
 
-Where $l/s$ represents long and short, $p^{best}_{a,\tau},p^{best}_{b,\tau}$ represents the best ask and bid price at time $\tau$. 
+Where $l/s$ represents long and short, $$p^{best}_{a,\tau},p^{best}_{b,\tau}$$ represents the best ask and bid price at time $\tau$. 
 
 Note that the model proposed trades and holds only one unit of stock asset at each time point. This assumption is made for several reasons: trading itself can impact the Limit Order Book (LOB), larger trades may cause significant changes in the mid-price; larger trading orders are typically split into multiple smaller orders for execution; and introducing a variable for the number of units traded would require a more complex model.
 
