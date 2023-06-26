@@ -37,11 +37,7 @@ D & =\diag(A\mathbf{1}_L).
 \end{align}$$
  
 The time and space complexity are $O(L^2 d)$ and $O(L^2+Ld)$ respectively.
-FAVOR+ (Choromanski et al., 2020) uses a random feature map 
-$ \phi:\mathbb{R}^d\rightarrow\mathbb{R}_+^r $ 
-(for $ r>0 $) such that the kernel 
-$ K: \mathbb{R}^d\times\mathbb{R}^d\rightarrow\mathbb{R}_+ $ 
-has:
+FAVOR+ (Choromanski et al., 2020) uses a random feature map $ \phi:\mathbb{R}^d\rightarrow\mathbb{R}_+^r, \forall r>0 $ such that the kernel $ K: \mathbb{R}^d\times\mathbb{R}^d\rightarrow\mathbb{R}_+ $ has:
 
 $$ K(x,y)=\mathbb{E}[ϕ(x)^T ϕ(y)] $$
 
