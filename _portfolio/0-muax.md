@@ -1,4 +1,3 @@
-
 ---
 title: "MUAX"
 excerpt: " <br/><img src='/images/muax_archi.jpeg' width='500' height='300'>"
