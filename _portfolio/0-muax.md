@@ -62,10 +62,10 @@ b. [Lunar Lander](https://github.com/bwfbowen/muax/blob/main/examples/lunarlande
 
 <figure>
   <img
-  src="/images/cart_pole_p.png"
+  src="/images/cart-pole-muax.gif"
   alt="Gym environment examples: Cart Pole">
   <img
-  src="/images/lunar_lander_p.png"
+  src="/images/lunar-lander-muax.gif"
   alt="Gym environment examples: Lunar Lander">
   <figcaption style='text-align: center'>Figure 2. Gym environment examples </figcaption>
 </figure>
