@@ -1,5 +1,5 @@
 ---
-title: 'Some recent advancement around MuZero'
+title: 'Some Recent Advancement Around MuZero'
 date: 2023-10-29
 permalink: /posts/2023/10/more-mcts/
 tags:
@@ -67,7 +67,7 @@ Figure 4 demonstrates the training process of Stochastic MuZero. During the unro
 
 <img src="/images/training.webp" alt="bit-flipping" width="500" height="300" style="margin-left: auto; margin-right: auto; display: block;">
 <figure>
-  <figcaption style='text-align: center'>Figure 4. Training of stochastic model in Stochastic MuZero. Here for a given trajectory of length 2 with observations $$o_{≤t:t+2}$$, actions $$a_{t:t+2}$$, value targets $$z_{t:t+2}$$, policy targets $$π_{t:t+2}$$ and rewards $$u_{t+1:t+K}$$, the model is unrolled for 2 steps. </figcaption>
+  <figcaption style='text-align: center'>Figure 4. Training of stochastic model in Stochastic MuZero. Here for a given trajectory of length 2 with observations $o_{≤t:t+2}$, actions $a_{t:t+2}$, value targets $z_{t:t+2}$, policy targets $π_{t:t+2}$ and rewards $u_{t+1:t+K}$, the model is unrolled for 2 steps. </figcaption>
 </figure>
 
 The loss is given by the MuZero loss and a chance loss:
