@@ -9,7 +9,7 @@ tags:
   - MCTS
 ---
 
-<img src="/images/limit-muzero.png" alt="Limitation of MuZero" width='300' height='200'>
+<img src="/images/limit-muzero.png" alt="Limitation of MuZero" width='500' height='300'>
 
 I have found 4 interesting papers that discover and address the limitations of MuZero. [EfficientZero](https://proceedings.neurips.cc/paper_files/paper/2021/hash/d5eca8dc3820cad9fe56a3bafda65ca1-Abstract.html) and [MCTS as regularized policy optimization](https://proceedings.mlr.press/v119/grill20a.html) improve the algorithm itself; [SampledMuZero](https://proceedings.mlr.press/v139/hubert21a.html) and [StochasticMuZero](https://openreview.net/forum?id=X6D9bAHhBQ1) extend the algorithm into a new setting that the original algorithm is not able to perform well. 
 
