@@ -48,9 +48,43 @@ Then they argued that the empirical visit count distribution $\hat{\pi}$: $$\hat
 
 The new policy is applied for acting, searching and learning process of AlphaZero.
 1. ACT: AlphaZero acts in the real environment by sampling actions according to $$a ∼ \hat{π}(·\ x_{root})$$. Instead, they proposed to sample actions sampling according to $$a ∼ \bar{π}(·\mid x_{root})$$. 
-2. SEARCH: During search, they proposed to stochastically sample actions according to $\bar{\pi}$ instead of the deterministic action selection rule. At each node x in the tree, $\bar{π}(·)$ is computed with Q-values and total visit counts at the node based on Definition 1. We label this variant as SEARCH. 
+2. SEARCH: During search, they proposed to stochastically sample actions according to $\bar{\pi}$ instead of the deterministic action selection rule. At each node x in the tree, $\bar{π}(·)$ is computed with Q-values and total visit counts at the node. 
 3. LEARN: AlphaZero computes locally improved policy with tree search and distills such improved policy into $π_θ$. They proposed to use $\bar{π}$ as the target policy in place of $\hat{π}$ to train prior policy 
 
 # Stochastic MuZero[Link](https://openreview.net/forum?id=X6D9bAHhBQ1)
+This paper proposed a method to generalize MuZero to learn and plan in stochastic environment. The idea is to factorize the stochastic state transitions into two deterministic transitions, the first is action $a_t$ conditioned transition from state $s_t$ to afterstate $as_t$(the hypothetical state after the action is applied but before the environment transitions to the next state), the second is a stochastic transition from $as_t$ to the next state $s_{t+1}$ guided by a chance outcome $c_t^i$.
+
+<img src="/images/afterstate.webp" alt="bit-flipping" width="500" height="300" style="margin-left: auto; margin-right: auto; display: block;">
+
+The proposed method applies modifications to planning and learning phases of MuZero. Figure 3 shows the search of Stochastic MuZero, where diamond nodes represent chance nodes and circular nodes represent decision nodes. Edges are selected by applying the pUCT formula in the case of decision nodes, and by sampling the prior $σ$ in the case of chance nodes.
+
+<img src="/images/search.webp" alt="bit-flipping" width="500" height="300" style="margin-left: auto; margin-right: auto; display: block;">
+<figure>
+  <figcaption style='text-align: center'>Figure 3. Monte Carlo Tree Search used in Stochastic MuZero. </figcaption>
+</figure>
+
+Figure 4 demonstrates the training process of Stochastic MuZero. During the unroll, the encoder $e$ receives the observation as input and generates a chance code $c_{t+k}$ deterministically. The policy, value and reward are trained towards the target $$\pi_{t+k}, z_{t+k}, u_{t+k}$$ as MuZero does. The distribution $\sigma_k$ over future codes are trained to predict the code produced by the encoder.
+
+<img src="/images/training.webp" alt="bit-flipping" width="500" height="300" style="margin-left: auto; margin-right: auto; display: block;">
+<figure>
+  <figcaption style='text-align: center'>Figure 4. Training of stochastic model in Stochastic MuZero. Here for a given trajectory of length 2 with observations $$o_{≤t:t+2}$$, actions $$a_{t:t+2}$$, value targets $$z_{t:t+2}$$, policy targets $$π_{t:t+2}$$ and rewards $$u_{t+1:t+K}$$, the model is unrolled for 2 steps. </figcaption>
+</figure>
+
+The loss is given by the MuZero loss and a chance loss:
+
+$$L_w^{chance}=\sum_{k=0}^{K-1}l^Q(z_{t+k},Q_t^k)+\sum_{k=0}^{K-1}l^{σ}(c_{t+k+1},σ^k_t)+β\sum_{k=0}^{K-1}\|c_{t+k+1}-c_{t+k+1}^e\|^2$$
+
+During inference, given the initial observation $$o_{≤t}$$ and actions $$a_{t:t+K}$$, trajectories from the model can be generated recurrently by unrolling it and by sampling chance outcomes from the distribution $$c_{t+k+1}∼σ_t^k$$.
 
 # Sampled MuZero[Link](https://proceedings.mlr.press/v139/hubert21a.html)
+This paper focuses on the limitation of MuZero that it can not be applied to action spaces that cannot be easily enumerated or are not discrete. The method proposed in this paper extends MuZero to the case of arbitrary action spaces.
+
+The proposed method is to sample a subset of actions for the search and the training:
+
+<img src="/images/sampled-muzero-improvement.webp" alt="bit-flipping" width="500" height="300" style="margin-left: auto; margin-right: auto; display: block;">
+<figure>
+  <figcaption style='text-align: center'>Figure 5. On the left, the current policy π(a|s). Next, K actions are sampled from a proposal distribution β and βˆ(a|s) is the corresponding empirical distribution. A sample-based improved policy Iˆβπ(a|s) = (βˆ/β)(a|s)f(s,a,Zˆβ(s)) is then built. As the number of samples K increases Iˆβπ(a|s) converges to the improved policy Iπ(a|s). </figcaption>
+</figure>
+
+1. Each time a leaf node is expanded, *Sampled MuZero* samples $K<<N$ actions from a distribution $β$, where the paper uses $β=π$
+2. MCTS produces an improved distribution $$\hat{I}_β π(a\mid s)$$ over the sampled actions. To avoid double counting of probabilities and remain stable, the UCB formula uses $$\frac{\hat{\beta}}{\beta}\pi$$ instead of raw $\pi$. The policy is updated on this sampled improvement.
