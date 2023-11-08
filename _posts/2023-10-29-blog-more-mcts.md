@@ -48,7 +48,7 @@ Then they argued that the empirical visit count distribution $\hat{\pi}$: $$\hat
 
 The new policy is applied for acting, searching and learning process of AlphaZero.
 1. ACT: AlphaZero acts in the real environment by sampling actions according to $$a ∼ \hat{π}(·\ x_{root})$$. Instead, they proposed to sample actions sampling according to $$a ∼ \bar{π}(·\mid x_{root})$$. 
-2. SEARCH: During search, they proposed to stochastically sample actions according to $\bar{\pi}$ instead of the deterministic action selection rule $$\arg\max_{a}Q(x,a)+c\dot π_θ(a \mid x)\dot\frac{\sqrt\sum_{b} n(x,b)}{1+n(x,a)}$$. At each node x in the tree, $\bar{π}(·)$ is computed with Q-values and total visit counts at the node based on Definition 1. We label this variant as SEARCH. 
+2. SEARCH: During search, they proposed to stochastically sample actions according to $\bar{\pi}$ instead of the deterministic action selection rule. At each node x in the tree, $\bar{π}(·)$ is computed with Q-values and total visit counts at the node based on Definition 1. We label this variant as SEARCH. 
 3. LEARN: AlphaZero computes locally improved policy with tree search and distills such improved policy into $π_θ$. They proposed to use $\bar{π}$ as the target policy in place of $\hat{π}$ to train prior policy 
 
 # Stochastic MuZero[Link](https://openreview.net/forum?id=X6D9bAHhBQ1)
