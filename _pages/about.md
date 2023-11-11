@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Hello! I'm Bowen Fang, currently studying Operations Research at Columbia University. My interests lie within optimization, machine learning and transportation. I am especially intested in mcts-based RL, which matches my expectation of how an agent should plan before acting.
+Hello! I'm Bowen Fang, currently studying Operations Research at Columbia University. My interests lie within optimization, machine learning and game. I am especially intested in mcts-based RL, which matches my expectation of how an agent should plan before acting. My ultimate goal is to create adaptive systems that could survive in complex and dynamic environments.
 
 My Journey
 ======
