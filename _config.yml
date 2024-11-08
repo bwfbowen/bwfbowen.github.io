@@ -82,7 +82,11 @@ analytics:
 author:
   name             : "Bowen Fang"
   avatar           : "short_hair.jpeg"
+<<<<<<< HEAD
   bio              : "PhD student at Columbia University, focusing on Reinforcement Learning and Autonomous Driving research."
+=======
+  bio              : "Hello! I am a PhD student at Columbia University. Right now, I'm working to make MCTS-based RL a go-to tool for folks doing RL research and practice, and get it into every RL textbook."
+>>>>>>> 86e0d32aaec7dedd1de7ef47678640026ee068c2
   location         : "New York, NY, United States"
   employer         :
   pubmed           :  # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"

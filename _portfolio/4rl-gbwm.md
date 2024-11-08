@@ -4,6 +4,8 @@ excerpt: "Proposed a reward engineering method and leveraged function approximat
 collection: portfolio
 ---
 
+View our blog from MathWorks website! [Reinforcement Learning as Your Portfolio Advisor](https://blogs.mathworks.com/finance/2023/08/22/reinforcement-learning-as-your-portfolio-advisor/)
+
 # Inspiration
 
 Let's say you want to invest and make money. Your goal is to maximize your return with a portfolio of stocks via some model. However, the ideal model could be very hard to realize since stock price changes are complex and often difficult to estimate. In addition, the model should be able to make decisions despite noisy inputs and perform effectively under different conditions. 
