@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Bowen Fang / Homepage"
 title_separator          : "-"
 name                     : &name "Bowen Fang"
-description              : &description "Hello! I have a keen interest in field of Reinforcement Learning with a focus on planning ability, and I am intrigued by the intersection of OR and RL and always seeking ways to explore this synergy. In addition, I am particularly passionate about Monte Carlo Tree Search (MCTS)-based Reinforcement Learning, from where my interest also extends to the development of more efficient neural networks with improved representation abilities."
+description              : &description "PhD student at Columbia University, focusing on Reinforcement Learning and Autonomous Driving research."
 url                      : https://bwfbowen.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "bwfbowen/bwfbowen.github.io"
@@ -82,11 +82,11 @@ analytics:
 author:
   name             : "Bowen Fang"
   avatar           : "short_hair.jpeg"
-  bio              : "Hello! I am a MS student in Operations Research at Columbia University. Right now, I'm working to make MCTS-based RL a go-to tool for folks doing RL research and practice, and get it into every RL textbook."
+  bio              : "PhD student at Columbia University, focusing on Reinforcement Learning and Autonomous Driving research."
   location         : "New York, NY, United States"
   employer         :
   pubmed           :  # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    :  # "http://yourfullgooglescholarurl.com"
+  googlescholar    :  "https://scholar.google.com/citations?user=bEebg80AAAAJ&hl=en"
   email            : "bf2504@columbia.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
@@ -103,7 +103,7 @@ author:
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         : "bowenfang"
-  orcid            : # "http://orcid.org/yourorcidurl"
+  orcid            : "https://orcid.org/0009-0000-6224-1588"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username

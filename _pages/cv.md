@@ -9,40 +9,49 @@ redirect_from:
 
 {% include base_path %}
 
-[Download My CV](https://bwfbowen.github.io/files/BowenFang_23fall_phdcv.pdf) <br> [Download My Resume](https://bwfbowen.github.io/files/BowenFang_23fall.pdf)
+[Download My CV](https://bwfbowen.github.io/files/BowenFang_latest.pdf)
 
 Education
 ======
-* B.S. in Big Data Management and Application, Peking University, 2022
-* M.S. in Operations Research, Columbia University in the City of New York, 2023
+* Ph.D. Student, Columbia University, 2023-present
+  * CEEM department
+  * Focus: Autonomous Driving and Reinforcement Learning 
 
-Work Experience
+* M.S., Columbia University, 2023
+  * IEOR department
+  * Focus: Operations Research and Reinforcement Learning
+
+* B.S., Peking University, 2022
+  * Department of Information Management
+  * Focus: Big Data Management and Application
+
+Honors and Awards
 ======
-* Research Assistant, Spring 2021 - July 2022
-  * Knowledge Discovery Lab, Peking University
-  * Supervisor: Professor [Meng Fan](https://www.im.pku.edu.cn/szll/xxzzyxxsjyjs/mf/index.htm)
+* Calatrava Family Fellowship
 
-* Research Assistant, Dec 2022 - present
-  * Dept. of Civil Engineering, Columbia University
+Research Experience
+======
+* Research Assistant, Columbia University, Dec 2022 - present
+  * CEEM department
   * Supervisor: Professor [Sharon Di](https://sharondi-columbia.wixsite.com/ditectlab/home-1)
-  
+
+* Research Assistant, Peking University, Spring 2021 - July 2022
+  * Knowledge Discovery Lab, Department of Information Management
+  * Supervisor: Professor [Meng Fan](https://www.im.pku.edu.cn/szll/xxzzyxxsjyjs/mf/index.htm)  
+      
+Industry Experience
+======
+* Data Scientist(Part-time), MathWorks, Aug 2022 - Dec 2022
+
+* ML Researcher, AI TOPIA, Sep 2021 - Jun 2022
+
+* Quant Analyst, Nomura Securities Orient International, Jul 2021 - Sep 2021
+
 Teaching Experience
 ======
 <ul>{% for post in site.teaching %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-    
-Internship Experience
-======
-* Part-time Data Scientist, Aug 2022 - Dec 2022
-  * MathWorks
-
-* ML Researcher, Sep 2021 - Jun 2022
-  * AI TOPIA
-
-* Software Engineering, Jul 2021 - Sep 2021
-  * Nomura Securities Orient International
-
 
 <!-- Skills
 ======
