@@ -53,6 +53,10 @@ Teaching Experience
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
+Service and Activities
+======
+* Student Assistant, Urban Mobility AI Workshop [Website](https://ditectlab.civil.columbia.edu/workshop/index.html), Columbia University, 2024
+
 <!-- Skills
 ======
 * Skill 1
