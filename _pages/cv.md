@@ -13,16 +13,14 @@ redirect_from:
 
 Education
 ======
-* Ph.D. Student, Columbia University, 2023-present
-  * CEEM department
+* Ph.D. Student, School of Engineering and Applied Science, Columbia University, 2023-present
+  * Advisor: Professor [Sharon Di](https://sharondi-columbia.wixsite.com/ditectlab/home-1)
   * Focus: Autonomous Driving and Reinforcement Learning 
 
-* M.S., Columbia University, 2023
-  * IEOR department
+* M.S., School of Engineering and Applied Science, Columbia University, 2023
   * Focus: Operations Research and Reinforcement Learning
 
-* B.S., Peking University, 2022
-  * Department of Information Management
+* B.S., Department of Information Management, Peking University, 2022
   * Focus: Big Data Management and Application
 
 Honors and Awards
@@ -32,7 +30,6 @@ Honors and Awards
 Research Experience
 ======
 * Research Assistant, Columbia University, Dec 2022 - present
-  * CEEM department
   * Supervisor: Professor [Sharon Di](https://sharondi-columbia.wixsite.com/ditectlab/home-1)
 
 * Research Assistant, Peking University, Spring 2021 - July 2022
