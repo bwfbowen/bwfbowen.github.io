@@ -17,5 +17,5 @@ Hello! I'm Bowen Fang, my research interests lie in Reinforcement Learning and p
 My Journey
 ======
 - Bachelor of Management in Big Data Management and Application, Peking University, 2022
-- Master of Science in Operations Research, Columbia University in the City of New York, 2023
+- Master of Science in Operations Research, Columbia University in the City of New York, 2024
 - Currently pursuing PhD in Autonomous Driving, Columbia University in the City of New York

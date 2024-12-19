@@ -13,11 +13,11 @@ redirect_from:
 
 Education
 ======
-* Ph.D. Student, School of Engineering and Applied Science, Columbia University, 2023-present
+* Ph.D. Student, School of Engineering and Applied Science, Columbia University, 2024-present
   * Advisor: Professor [Sharon Di](https://sharondi-columbia.wixsite.com/ditectlab/home-1)
   * Focus: Autonomous Driving and Reinforcement Learning 
 
-* M.S., School of Engineering and Applied Science, Columbia University, 2023
+* M.S., School of Engineering and Applied Science, Columbia University, 2024
   * Focus: Operations Research and Reinforcement Learning
 
 * B.S., Department of Information Management, Peking University, 2022
