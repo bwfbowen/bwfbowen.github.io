@@ -3,6 +3,8 @@
   contents:
     - name: Full Name
       value: Bowen Fang
+    - name: Phone
+      value: 917-293-3109
     - name: Languages
       value: English, Mandarin Chinese
 
@@ -13,72 +15,137 @@
       institution: Columbia University, New York, NY
       year: 2024-present
       description:
-        - Focus on Reinforcement Learning and Autonomous Driving.
-        - Advised by Professor Sharon Di.
+        - "Focus: Reinforcement Learning and Autonomous Driving"
+        - "GPA: 4.1"
+        - "Advisor: Sharon Di"
+        - "Relevant courses: Diffusion Models AI & RL, Quantum Computing and Communication"
     - title: M.S. in Operations Research
       institution: Columbia University, New York, NY
-      year: 2024
+      year: "Dec 2023"
       description:
-        - Relevant courses included Advanced Big Data and AI, ML and High-dimensional Analysis, Robot Learning, Optimization, and Stochastic Models.
+        - "GPA: 4.13"
+        - "Relevant courses: Advanced Big Data and AI, ML and High-dimensional Analysis, Robot Learning, Optimization, Stochastic Models"
     - title: Bachelor in Big Data Management and Applications
       institution: Peking University, Beijing, China
-      year: 2018-2022
+      year: "Sep 2018 - Jul 2022"
       description:
-        - Relevant courses included Algorithms and Data Structure, and Database.
+        - "GPA: 3.5"
+        - "Relevant courses: Algorithms and Data Structure, Database"
 
-- title: Experience
+- title: Industry Experience
   type: time_table
   contents:
     - title: Applied Scientist
       institution: AWS, New York, NY
       year: "May 2025 - Aug 2025"
       description:
-        - Focus on training efficiency and stability of LLMs.
+        - "Training efficiency and stability of LLM"
     - title: Part-time Data Scientist
       institution: MathWorks, New York, NY
       year: "Aug 2022 - Dec 2022"
       description:
-        - Reproduced Dynamic Programming for Goal-based Wealth Management.
-        - Developed 4 reward signals and devised experiments with 6 model-free agents to discover the best algorithm.
-        - The resulting code was published officially and added into the MATLAB toolbox.
+        - "Reproduced Dynamic Programming for Goal-based Wealth Management, developed 4 reward signals, devised experiments with 6 model-free agents to discover the best algorithm"
+        - "Achieved an increase of success rate from 41% to 61%, compared to Q-Learning baseline, the success rate is -0.07 from theoretical best probability. A blog with code was published officially and added into MATLAB toolbox"
     - title: Machine Learning Research Engineer Intern
       institution: AI TOPIA, Beijing, China
       year: "Sep 2021 - Jun 2022"
       description:
-        - Proposed learning algorithms to optimize execution cost for intraday order placement.
-        - Utilized advanced models including DeepLOB and XGBoost to improve short-term prediction.
+        - "Proposed learning algorithms to optimize execution cost for intraday order placement optimization. Implemented 5 model-free algorithms and a high frequency trading environment"
+        - "Utilized advanced models including DeepLOB and XGBoost to improve the short-term prediction. Realized on average 2-ticks better price for tick-level order placement"
+    - title: Quant Analyst Intern
+      institution: Nomura Orient International Securities, Shanghai, China
+      year: "Jul 2021 - Sep 2021"
+      description:
+        - "Perfected our FOF website platform. Built dashboard and SQL database for metrics include style and systematic risk"
+        - "Realized a new feature in MongoDB and a web crawler, which has been added to the department's core codebase"
+    - title: Data Scientist, Intern
+      institution: Deloitte, Beijing, China
+      year: "Aug 2020 - Oct 2020"
+      description:
+        - "Completed a web crawler project and automatically produced formatted excel spreadsheet weekly"
+        - "Collaborated with data scientists on the interactive data visualization, preprocessed fundamental data for business intelligence dashboard products"
 
-# - title: Open Source Projects
-#   type: time_table
-#   contents:
-#     - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-#       year: 2015-now
-#       description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+- title: Project Experience
+  type: time_table
+  contents:
+    - title: "SINA: Seamless, Intelligent Navigation Anywhere"
+      institution: "NY, United States"
+      year: 
+      description:
+        - "Winner of CS3 VALIDATE Accelerator program, received initial funding and continued funding."
+    - title: "Python Open-source Library Muax"
+      institution: "NY, United States"
+      year:
+      description:
+        - "Implemented variants of MuZero with JAX/TensorFlow, supported distributed RL and distributed training"
+        - "Integrated with DeepMind's Acme framework, compared MCTS search policies on Open Spiel multi-agent games (e.g., Go)"
+    - title: "SLAMuZero"
+      institution: "NY, United States"
+      year:
+      description:
+        - "Enhanced MuZero perception with SLAM for embodied AI, experiment on Meta's Habitat simulator"
+        - "Realized comparable performance for indoor exploration tasks on Gibson dataset, with better sample efficiency"
+    - title: "LLM Agent Navigation in VR Unity"
+      institution: "NY, United States"
+      year:
 
-# - title: Honors and Awards
-#   type: time_table
-#   contents:
-#     - year: 1921
-#       items:
-#         - Nobel Prize in Physics
-#         - Matteucci Medal
-#     - year: 2029
-#       items:
-#         - Max Planck Medal
+- title: Presentations
+  type: time_table
+  contents:
+    - title: "Learn to Tour: Operator Design for Solution Feasibility Mapping, INFORMS"
+      institution: "Phoenix, United States"
+      year: 2023
+    - title: "SLAMuZero: Plan and learn to Map for Joint SLAM and Navigation, ICAPS"
+      institution: "Banff, Canada"
+      year: 2024
 
-# - title: Academic Interests
-#   type: nested_list
-#   contents:
-#     - title: Topic 1.
-#       items:
-#         - Description 1.
-#         - Description 2.
-#     - title: Topic 2.
-#       items:
-#         - Description 1.
-#         - Description 2.
+- title: Honors and Awards
+  type: time_table
+  contents:
+    - year: 2024
+      items:
+        - Calatrava Family Fellowship
 
-# - title: Other Interests
-#   type: list
-#   contents:
-#     - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+- title: Professional Service
+  type: nested_list
+  contents:
+    - title: Reviewer
+      items:
+        - Transportation Research Board
+        - "Transportation Research Part C: Emerging Technologies"
+    - title: Workshop Organization
+      items:
+        - "Student Assistant, Urban Mobility AI Workshop, Columbia University, 2024"
+        - "Developed and maintained workshop website with HTML/CSS/JS, Assisted in organization and coordination"
+
+- title: Teaching Experience
+  type: time_table
+  contents:
+    - title: Teaching Assistant
+      institution: IEOR department, Columbia University, New York, NY
+      year: 2023
+      description:
+        - "Graduate Optimization Models and Methods (IEOR E4004) instructed by Cedric Josz"
+        - "Self-motivated to enhance final project on Moving Object Detection, created sample videos and code templates for quick start"
+
+- title: Technical Skills
+  type: nested_list
+  contents:
+    - title: Programming
+      items:
+        - "Python, SQL, C++, C#, Java, MATLAB"
+    - title: Development
+      items:
+        - "HTML/CSS, JavaScript, Unity, XCode"
+    - title: Machine Learning
+      items:
+        - "JAX, PyTorch, TensorFlow, MuZero, Acme, OpenCV, LLM"
+    - title: Data Science
+      items:
+        - "Apache Spark, Docker, Airflow, MongoDB, Pandas, NumPy, SciPy"
+    - title: Cloud Computing
+      items:
+        - "AWS, GCP"
+    - title: Others
+      items:
+        - "Git, LaTeX, Linux, iOS"
