@@ -33,6 +33,6 @@ latest_posts:
 
 I am a Ph.D. student at Columbia University's School of Engineering and Applied Science, where my research focuses on Reinforcement Learning and Autonomous Driving.
 
-I hold an M.S. in Operations Research from Columbia University and a B.Mgt in Big Data Management from Peking University. 
+I hold an M.S. in Operations Research from Columbia University and a Bachelor in Big Data Management and Applications, minor in Economics from Peking University. 
 
 This website serves as a central hub for my publications, projects, and professional activities.
