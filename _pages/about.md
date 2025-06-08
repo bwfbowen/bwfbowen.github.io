@@ -27,10 +27,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-<div class="alert alert-info" role="alert">
-  <i class="fa-solid fa-triangle-exclamation"></i> &nbsp; This website is currently under construction. Content may be incomplete.
-</div>
-
 I am a Ph.D. student at Columbia University's School of Engineering and Applied Science, where my research focuses on Reinforcement Learning and Autonomous Driving.
 
 I hold an M.S. in Operations Research from Columbia University and a Bachelor in Big Data Management and Applications, minor in Economics from Peking University. 
