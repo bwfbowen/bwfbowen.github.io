@@ -4,7 +4,7 @@ title: SINA
 description: Seamless, Intelligent Navigation Anywhere
 img: assets/img/SINA Logo Design Concept.png
 importance: 1
-category: work
+category: award
 redirect: https://cs3-erc.org/event-recap-cs3-validate-accelerator-demo-day/
 ---
 
