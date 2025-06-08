@@ -1417,3 +1417,29 @@ figure.cover {
     color: #23212d !important;
   }
 }
+
+/*****************************************************************************/
+/*
+/* General
+/*
+/*****************************************************************************/
+
+// Base
+body {
+  background: var(--global-bg-color);
+  color: var(--global-text-color);
+}
+
+// Horizontal Rule
+hr {
+  border: 0;
+  border-top: 1px solid var(--global-divider-color);
+  margin-bottom: var(--global-space);
+}
+
+// Images
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--global-border-radius);
+}
