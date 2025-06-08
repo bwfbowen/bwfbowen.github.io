@@ -36,7 +36,7 @@
     {
       "name": "AWS",
       "position": "Applied Scientist",
-      "url": "https://aws.amazon.com/",
+      "url": "https://www.amazon.science/author/bowen-fang",
       "startDate": "2025-05-01",
       "endDate": "2025-08-01",
       "summary": "Training efficiency and stability of LLM",
@@ -45,10 +45,10 @@
     {
       "name": "MathWorks",
       "position": "Part-time Data Scientist",
-      "url": "https://www.mathworks.com/",
+      "url": "https://blogs.mathworks.com/finance/2023/08/22/reinforcement-learning-as-your-portfolio-advisor/",
       "startDate": "2022-08-01",
       "endDate": "2022-12-01",
-      "summary": "Reproduced Dynamic Programming for Goal-based Wealth Management, developed 4 reward signals, devised experiments with 6 model-free agents to discover the best algorithm. Achieved an increase of success rate from 41% to 61%, compared to Q-Learning baseline, the success rate is -0.07 from theoretical best probability. A blog with code was published officially and added into MATLAB toolbox.",
+      "summary": "Developed RL algorithms for goal-based wealth management.",
       "highlights": []
     },
     {
@@ -57,25 +57,25 @@
       "url": "",
       "startDate": "2021-09-01",
       "endDate": "2022-06-01",
-      "summary": "Proposed learning algorithms to optimize execution cost for intraday order placement optimization. Implemented 5 model-free algorithms and a high frequency trading environment. Utilized advanced models including DeepLOB and XGBoost to improve the short-term prediction. Realized on average 2-ticks better price for tick-level order placement.",
+      "summary": "Optimized intraday order placement using ML and RL algorithms.",
       "highlights": []
     },
     {
       "name": "Nomura Orient International Securities",
       "position": "Quant Analyst Intern",
-      "url": "",
+      "url": "https://www.nomura.com/",
       "startDate": "2021-07-01",
       "endDate": "2021-09-01",
-      "summary": "Perfected our FOF website platform. Built dashboard and SQL database for metrics include style and systematic risk. Realized a new feature in MongoDB and a web crawler, which has been added to the department's core codebase.",
+      "summary": "Built FOF platform features, dashboards, and databases.",
       "highlights": []
     },
     {
       "name": "Deloitte",
       "position": "Data Scientist, Intern",
-      "url": "",
+      "url": "https://www.deloitte.com/",
       "startDate": "2020-08-01",
       "endDate": "2020-10-01",
-      "summary": "Completed a web crawler project and automatically produced formatted excel spreadsheet weekly. Collaborated with data scientists on the interactive data visualization, preprocessed fundamental data for business intelligence dashboard products.",
+      "summary": "Automated data collection and supported BI dashboard development.",
       "highlights": []
     }
   ],
@@ -114,7 +114,8 @@
       "title": "Calatrava Family Fellowship",
       "date": "2024",
       "awarder": "Columbia University",
-      "summary": ""
+      "summary": "",
+      "url": "https://calatrava.com/"
     }
   ],
   "certificates": [],
@@ -138,25 +139,13 @@
       "name": "SINA: Seamless, Intelligent Navigation Anywhere",
       "summary": "Winner of CS3 VALIDATE Accelerator program, received initial funding and continued funding.",
       "highlights": [],
-      "url": ""
+      "url": "https://cs3-erc.org/event-recap-cs3-validate-accelerator-demo-day/"
     },
     {
       "name": "Python Open-source Library Muax",
       "summary": "Implemented variants of MuZero with JAX/TensorFlow, supported distributed RL and distributed training. Integrated with DeepMind's Acme framework, compared MCTS search policies on Open Spiel multi-agent games (e.g., Go).",
       "highlights": [],
-      "url": ""
-    },
-    {
-      "name": "SLAMuZero",
-      "summary": "Enhanced MuZero perception with SLAM for embodied AI, experiment on Meta's Habitat simulator. Realized comparable performance for indoor exploration tasks on Gibson dataset, with better sample efficiency.",
-      "highlights": [],
-      "url": ""
-    },
-    {
-      "name": "LLM Agent Navigation in VR Unity",
-      "summary": "",
-      "highlights": [],
-      "url": ""
+      "url": "https://github.com/bwfbowen/muax"
     }
   ]
 }
