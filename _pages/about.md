@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Ph.D. Student in School of Engineering and Applied Science at Columbia University.
+subtitle: Ph.D. Student at Columbia University.
 
 profile:
   align: right
