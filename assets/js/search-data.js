@@ -142,6 +142,11 @@ ninja.data = [{
           description: "Seamless, Intelligent Navigation Anywhere",
           section: "Projects",handler: () => {
               window.location.href = "/projects/sina/";
+            },},{id: "teaching-ta-optimization-models-and-methods",
+          title: 'TA: Optimization Models and Methods',
+          description: "TA for IEOR E4004. Topics included linear, nonlinear, integer, and dynamic programming.",
+          section: "Teaching",handler: () => {
+              window.location.href = "/teaching/2023-spring-optimization";
             },},{
         id: 'social-email',
         title: 'email',
