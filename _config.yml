@@ -138,8 +138,6 @@ newsletter:
 
 collections:
   news:
-    defaults:
-      layout: post
     output: true
   projects:
     output: true
@@ -209,6 +207,11 @@ plugins:
 
 # Sitemap settings
 defaults:
+  - scope:
+      path: ""
+      type: "news"
+    values:
+      layout: "post"
   - scope:
       path: "assets"
     values:
