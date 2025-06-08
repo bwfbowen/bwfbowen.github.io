@@ -3,6 +3,9 @@ layout: page
 title: Muax
 permalink: /projects/muax/
 description: An open-source implementation of MuZero with JAX and TensorFlow.
+img:
+importance: 2
+category: fun
 ---
 
 Muax is an open-source library that provides implementations of MuZero variants using JAX and TensorFlow. It supports distributed reinforcement learning and training.
