@@ -19,6 +19,6 @@ My work included creating and presenting tutorials on:
 *   **Model Evaluation and Interpretability**: Covering key classification and regression metrics with `scikit-learn` and introducing model explainability techniques using SHAP to help students understand and validate their models.
 
 You can download the tutorial notebooks here:
-*   [Big Data Tutorial: Python, NumPy, JAX, and BigQuery](/assets/jupyter/Big_Data_Tutorial.ipynb)
-*   [Google Maps API & Machine Learning with JAX and Diffusers](/assets/jupyter/BDT_tutorial3.ipynb)
-*   [Model Evaluation Metrics and Explainability with SHAP](/assets/jupyter/BDT_tutorial_metrics.ipynb) 
+*   [Big Data Tutorial: Python, NumPy, JAX, and BigQuery]({{ site.baseurl }}/assets/jupyter/Big_Data_Tutorial.ipynb)
+*   [Google Maps API & Machine Learning with JAX and Diffusers]({{ site.baseurl }}/assets/jupyter/BDT_tutorial3.ipynb)
+*   [Model Evaluation Metrics and Explainability with SHAP]({{ site.baseurl }}/assets/jupyter/BDT_tutorial_metrics.ipynb) 
