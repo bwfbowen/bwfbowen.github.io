@@ -6,7 +6,7 @@ subtitle: A brief introduction to my work and interests.
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: bwf.JPG
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Your Title</p>
@@ -26,6 +26,10 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
+
+<div class="alert alert-info" role="alert">
+  <i class="fa-solid fa-triangle-exclamation"></i> &nbsp; This website is currently under construction. Content may be incomplete.
+</div>
 
 Welcome to my personal website. I am Bowen Fang, a [Your Role, e.g., PhD student, researcher] at [Your Institution]. My research focuses on [Your Research Area].
 
