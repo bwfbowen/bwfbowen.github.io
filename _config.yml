@@ -162,7 +162,7 @@ kramdown:
       start_line: 1
 
 # Includes & excludes
-include: ["_pages", "_scripts"]
+include: ["_pages", "_scripts", "assets/jupyter/"]
 exclude:
   - bin/
   - CONTRIBUTING.md
