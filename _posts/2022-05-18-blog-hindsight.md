@@ -31,7 +31,7 @@ The solution proposed in this paper does not require any domain-specific knowled
 
 Figure 1 compares the performance of plain DQN and DQN+HER in this environment. DQN without HER can solve problems with at most 13 coins, while DQN+HER can easily handle environments with 50 coins.
 
-<img src="/images/bit-flipping.png" alt="bit-flipping" width="500" height="300" style="margin-left: auto; margin-right: auto; display: block;">
+<img src="/assets/img/bit-flipping.png" alt="bit-flipping" width="500" height="300" style="margin-left: auto; margin-right: auto; display: block;">
 <figure>
   <figcaption style='text-align: center'>Figure 1. Bit-flipping experiment w/o HER </figcaption>
 </figure>
@@ -50,7 +50,7 @@ With HER, one task is to define the "subset of other goals." The simplest approa
 
 <figure>
   <img
-  src="/images/her_algo.png"
+  src="/assets/img/her_algo.png"
   alt="HER algorithm">
   <figcaption style='text-align: center'>Figure 2. HER algorithm </figcaption>
 </figure>
@@ -67,7 +67,7 @@ The paper used `Mujoco` and introduced its own environment, which has been made 
 
 <figure>
   <img
-  src="/images/mujoco_her.gif"
+  src="/assets/img/mujoco_her.gif"
   alt="environments used">
   <figcaption style='text-align: center'>Figure 3. Experiment environments </figcaption>
 </figure>
@@ -103,7 +103,7 @@ As shown in Figure 4, the performance of DDPG, DDPG with count-based exploration
 
 <figure>
   <img
-  src="/images/her_ddpg_multi_cmp.png"
+  src="/assets/img/her_ddpg_multi_cmp.png"
   alt="HER performance comparison">
   <figcaption style='text-align: center'>Figure 4. HER performance comparison, where the average results are taken from 5 random seeds, and the shadow represents one standard deviation. The red line represents the strategy using future sampling with k=4. </figcaption>
 </figure>
@@ -115,7 +115,7 @@ In this section's experiment, the goal for each episode is fixed to be the same 
 
 <figure>
   <img
-  src="/images/ddpg_her_single_cmp.png"
+  src="/assets/img/ddpg_her_single_cmp.png"
   alt="HER performance comparison">
   <figcaption style='text-align: center'>Figure 5. HER single goal performance comparison </figcaption>
 </figure>
@@ -125,7 +125,7 @@ In this part, an attempt is made to design a reward function instead of using th
 
 <figure>
   <img
-  src="/images/her_reng.png"
+  src="/assets/img/her_reng.png"
   alt="HER performance comparison">
   <figcaption style='text-align: center'>Figure 6. Performance comparison between HER and HER with designed reward functions. </figcaption>
 </figure>
@@ -146,7 +146,7 @@ In previous experiments, only the final state of an episode was utilized. In thi
 
 <figure>
   <img
-  src="/images/goal_strats.png"
+  src="/assets/img/goal_strats.png"
   alt="HER performance comparison">
   <figcaption style='text-align: center'>Figure 7. Performance comparison of different goal selection methods. </figcaption>
 </figure>
@@ -173,7 +173,7 @@ Moreover, I attempted to implement HER myself, applying it to the `MountainCar-v
 
 <figure>
   <img
-  src="/images/mountaincar-her.gif"
+  src="/assets/img/mountaincar-her.gif"
   alt="mountain car HER">
   <figcaption style='text-align: center'>Mountain Car HER </figcaption>
 </figure>

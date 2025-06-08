@@ -70,7 +70,7 @@ It consists of multiple nested residual blocks, followed by batch normalization,
 The authors proposed the FT-Transformer (Feature Tokenizer Transformer) architecture, as shown below. It consists of two parts: the first part involves mapping all the features to embedding vectors, while the second part applies a series of Transformer blocks to these vectors.
 <figure>
   <img
-  src="/images/fttrans.png"
+  src="/assets/img/fttrans.png"
   alt="ft-transformer">
   <figcaption style='text-align: center'>Figure 1. In the FT-Transformer architecture, the first step is to map all the features to vectors through an embedding process. Then, a special token, [CLS], is added to the mapped vectors to serve as the final prediction of the model. </figcaption>
 </figure>
@@ -94,7 +94,7 @@ $$\hat{y}=\lin(\relu(\layern(T_L^{[CLS]}))).$$
 
 <figure>
   <img
-  src="/images/fttrans_struct.png"
+  src="/assets/img/fttrans_struct.png"
   alt="ft-transformer">
   <figcaption style='text-align: center'>Figure 2. (a) is Feature Tokenizer, (b) is one Transformer block. </figcaption>
 </figure>
@@ -110,7 +110,7 @@ Apart from Appendix, 11 publicly available datasets are compared in the paper. E
 
 <figure>
   <img
-  src="/images/data_cmp_rtdl.png"
+  src="/assets/img/data_cmp_rtdl.png"
   alt="datasets">
   <figcaption style='text-align: center'>Figure 3. For the 11 datasets, the evaluation metric for regression problems is the root mean square error (RMSE), while for binary classification and multi-class classification, the evaluation metric is accuracy. The terms "num. features" and "cat. features" represent the number of numerical features and categorical features, respectively. </figcaption>
 </figure>
@@ -140,7 +140,7 @@ The result is shown below:
 
 <figure>
   <img
-  src="/images/dl_cmp_rtdl.png"
+  src="/assets/img/dl_cmp_rtdl.png"
   alt="deep learning models comparison">
   <figcaption style='text-align: center'>Figure 4. Deep learning models comparison. Bold indicates the best-performing model for each task. </figcaption>
 </figure>
@@ -148,15 +148,15 @@ The result is shown below:
 To summarize, 
 1. MLP remains a good sanity check.
 
-1. ResNet serves as an effective baseline, as no other model consistently outperforms it.
+2. ResNet serves as an effective baseline, as no other model consistently outperforms it.
 
-1. Fine-tuning can make MLP and ResNet competitive, so the authors recommend tuning the parameters of the baselines when feasible. They also mention the helpfulness of Optuna in parameter tuning.
+3. Fine-tuning can make MLP and ResNet competitive, so the authors recommend tuning the parameters of the baselines when feasible. They also mention the helpfulness of Optuna in parameter tuning.
 
-1. Next, the authors found that the NODE model performs well on multiple tasks. However, it has a larger parameter count compared to ResNet and FT-Transformer, and it employs a framework similar to ensemble learning. Therefore, the authors further compared the performance of NODE, ResNet, and FT-Transformer using ensembling.
+4. Next, the authors found that the NODE model performs well on multiple tasks. However, it has a larger parameter count compared to ResNet and FT-Transformer, and it employs a framework similar to ensemble learning. Therefore, the authors further compared the performance of NODE, ResNet, and FT-Transformer using ensembling.
 
 <figure>
   <img
-  src="/images/ensemble_dl_rtdl.png"
+  src="/assets/img/ensemble_dl_rtdl.png"
   alt="Ensemble deep learning models comparison">
   <figcaption style='text-align: center'>Figure 5. Ensemble deep learning models comparison. Bold indicates the best-performing model for each task. </figcaption>
 </figure>
@@ -168,7 +168,7 @@ In this section, all deep learning models are compared with GBDT models in ensem
 
 <figure>
   <img
-  src="/images/gbdt_dl_rtdl.png"
+  src="/assets/img/gbdt_dl_rtdl.png"
   alt="Ensemble deep learning models vs GBDT">
   <figcaption style='text-align: center'>Figure 6. Ensemble deep learning models and GBDT models comparison. Bold indicates the best-performing model for each task. </figcaption>
 </figure>
@@ -181,7 +181,7 @@ The default parameters of FT-Transformer is given in the Appendix:
 
 <figure>
   <img
-  src="/images/dparam_fttrans_rtdl.png"
+  src="/assets/img/dparam_fttrans_rtdl.png"
   alt="Default parameters of FT-Transformer">
   <figcaption style='text-align: center'>Figure 7. The default parameter of FT-Transformer. </figcaption>
 </figure>
@@ -202,7 +202,7 @@ where $f_{GBDT}(x)$ is the average output of 30 randomly generated decision tree
 
 <figure>
   <img
-  src="/images/syn_cmp_rtdl.png"
+  src="/assets/img/syn_cmp_rtdl.png"
   alt="FT-Transformer vs ResNet">
   <figcaption style='text-align: center'>Figure 8. 5 experiment results on test set, each alpha represents a task. </figcaption>
 </figure>
@@ -220,7 +220,7 @@ Using the same procedure as before, the author examined the performance without 
 
 <figure>
   <img
-  src="/images/ablation_rtdl.png"
+  src="/assets/img/ablation_rtdl.png"
   alt="Ablation Transformer">
   <figcaption style='text-align: center'>Figure 9. 2 attention mechanism and w/o feature biases comparison. </figcaption>
 </figure>
@@ -238,7 +238,7 @@ Firstly, the authors present a comparison of the training time between ResNet an
 
 <figure>
   <img
-  src="/images/time_cmp_rtdl.png"
+  src="/assets/img/time_cmp_rtdl.png"
   alt="Training time comparison">
   <figcaption style='text-align: center'>Figure 10. Training time comparison of FT-Transformer and ResNet-like MLP in seconds. The huge difference on Yahoo(YA) dataset might be resulted from large feature size. </figcaption>
 </figure>
@@ -247,7 +247,7 @@ Next, the authors attempted to limit the tuning time and observe the performance
 
 <figure>
   <img
-  src="/images/tlimit_cmp_rtdl.png"
+  src="/assets/img/tlimit_cmp_rtdl.png"
   alt="Limit training time comparison">
   <figcaption style='text-align: center'>Figure 11. The number of iterations for tuning with Optuna is indicated in parentheses. The red bold font represents the best performance among all models, while the black bold font represents the best performance among the deep learning models. </figcaption>
 </figure>
@@ -262,10 +262,10 @@ The appendix provides the performance of different models on four datasets that 
 
 <figure>
   <img
-  src="/images/other_rtdl.png"
+  src="/assets/img/other_rtdl.png"
   alt="Other datasets for comparison">
   <img
-  src="/images/other_cmp_rtdl.png"
+  src="/assets/img/other_cmp_rtdl.png"
   alt="Other datasets for comparison">
   <figcaption style='text-align: center'>Figure 12. Additonal datasets. </figcaption>
 </figure>
@@ -279,7 +279,7 @@ The author provided experiment results on LightGBM:
 
 <figure>
   <img
-  src="/images/lightgbm_rtdl.png"
+  src="/assets/img/lightgbm_rtdl.png"
   alt="LightGBM for comparison">
   <figcaption style='text-align: center'>Figure 13. Comparison of LightGBM and other models on CA, AD, HI datasets. </figcaption>
 </figure>

@@ -19,7 +19,7 @@ A Limit Order Book (LOB) records the outstanding limit orders in the current mar
 
 <figure>
   <img
-  src="/images/lob-drlhft.png"
+  src="/assets/img/lob-drlhft.png"
   alt="A demonstration of LOB data">
   <figcaption style='text-align: center'>Figure 1. A demonstration of LOB data </figcaption>
 </figure>
@@ -55,7 +55,7 @@ The data used in this paper comes from [LOBSTER](https://lobsterdata.com/), whic
 
 <figure>
   <img
-  src="/images/action-drlhft.png"
+  src="/assets/img/action-drlhft.png"
   alt="Action effects">
   <figcaption style='text-align: center'>Figure 2. Action effects </figcaption>
 </figure>
@@ -88,7 +88,7 @@ The following figures depict the performance of the agent on the test set. They 
 
 <figure>
   <img
-  src="/images/pnl-drlhft.png"
+  src="/assets/img/pnl-drlhft.png"
   alt="PnL">
   <figcaption style='text-align: center'>Figure 3. The test set results are presented from left to right as follows: cumulative returns on the test set, daily average returns and standard deviation, and the distribution of trade returns. </figcaption>
 </figure>

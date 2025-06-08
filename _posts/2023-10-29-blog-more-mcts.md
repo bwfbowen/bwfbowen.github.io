@@ -9,7 +9,7 @@ tags:
   - MCTS
 ---
 
-<img src="/images/limit-muzero.png" alt="Limitation of MuZero" width='500' height='300'>
+<img src="/assets/img/limit-muzero.png" alt="Limitation of MuZero" width='500' height='300'>
 
 I have found 4 interesting papers that discover and address the limitations of MuZero. [EfficientZero](https://proceedings.neurips.cc/paper_files/paper/2021/hash/d5eca8dc3820cad9fe56a3bafda65ca1-Abstract.html) and [MCTS as regularized policy optimization](https://proceedings.mlr.press/v119/grill20a.html) improve the algorithm itself; [SampledMuZero](https://proceedings.mlr.press/v139/hubert21a.html) and [StochasticMuZero](https://openreview.net/forum?id=X6D9bAHhBQ1) extend the algorithm into a new setting that the original algorithm is not able to perform well. 
 
@@ -20,7 +20,7 @@ The author finds that in limited-data setting, for instance, Atari 100K, which i
 2. Predicting the reward from a state is a hard problem. If we only see the first observation, along with future actions, it is very hard both for an agent and a human to predict at which exact future timestep the player would lose a point. However, it is easy to predict the agent will miss the ball after a sufficient number of timesteps if he does not move. In practice, a human will never try to predict the exact step that he loses the point but will imagine over a longer horizon and thus get a more confident prediction. 
 3. This value target suffers from off-policy issues, since the trajectory is rolled out using an older policy, and thus the value target is no longer accurate. When data is limited, we have to reuse the data sampled from a much older policy, thus exaggerating the inaccurate value target issue.
 
-<img src="/images/effi-limi2.png" alt="bit-flipping" width="500" height="300" style="margin-left: auto; margin-right: auto; display: block;">
+<img src="/assets/img/effi-limi2.png" alt="bit-flipping" width="500" height="300" style="margin-left: auto; margin-right: auto; display: block;">
 <figure>
   <figcaption style='text-align: center'>Figure 1. To predict at which exact future timestep the player would lose a point could be hard, but it is easy to predict the agent will miss the ball after a sufficient number of timesteps if he does not move </figcaption>
 </figure>
@@ -29,7 +29,7 @@ Then 3 methods are proposed to solve each of the issues.
 
 The first one is self-supervised to provide more information. The idea is illustrated by the Figure 2. That is, the hidden state from dynamic function should be similar to the hidden state from the representation of the next observation. 
 
-<img src="/images/self-consistent.png" alt="bit-flipping" width="500" height="300" style="margin-left: auto; margin-right: auto; display: block;">
+<img src="/assets/img/self-consistent.png" alt="bit-flipping" width="500" height="300" style="margin-left: auto; margin-right: auto; display: block;">
 <figure>
   <figcaption style='text-align: center'>Figure 2. The self-supervised consistency loss </figcaption>
 </figure>
@@ -54,18 +54,18 @@ The new policy is applied for acting, searching and learning process of AlphaZer
 # Stochastic MuZero[Link](https://openreview.net/forum?id=X6D9bAHhBQ1)
 This paper proposed a method to generalize MuZero to learn and plan in stochastic environment. The idea is to factorize the stochastic state transitions into two deterministic transitions, the first is action $a_t$ conditioned transition from state $s_t$ to afterstate $as_t$(the hypothetical state after the action is applied but before the environment transitions to the next state), the second is a stochastic transition from $as_t$ to the next state $s_{t+1}$ guided by a chance outcome $c_t^i$.
 
-<img src="/images/afterstate.webp" alt="bit-flipping" width="500" height="300" style="margin-left: auto; margin-right: auto; display: block;">
+<img src="/assets/img/afterstate.webp" alt="bit-flipping" width="500" height="300" style="margin-left: auto; margin-right: auto; display: block;">
 
 The proposed method applies modifications to planning and learning phases of MuZero. Figure 3 shows the search of Stochastic MuZero, where diamond nodes represent chance nodes and circular nodes represent decision nodes. Edges are selected by applying the pUCT formula in the case of decision nodes, and by sampling the prior $σ$ in the case of chance nodes.
 
-<img src="/images/search.webp" alt="bit-flipping" width="500" height="300" style="margin-left: auto; margin-right: auto; display: block;">
+<img src="/assets/img/search.webp" alt="bit-flipping" width="500" height="300" style="margin-left: auto; margin-right: auto; display: block;">
 <figure>
   <figcaption style='text-align: center'>Figure 3. Monte Carlo Tree Search used in Stochastic MuZero. </figcaption>
 </figure>
 
 Figure 4 demonstrates the training process of Stochastic MuZero. During the unroll, the encoder $e$ receives the observation as input and generates a chance code $c_{t+k}$ deterministically. The policy, value and reward are trained towards the target $$\pi_{t+k}, z_{t+k}, u_{t+k}$$ as MuZero does. The distribution $\sigma_k$ over future codes are trained to predict the code produced by the encoder.
 
-<img src="/images/training.webp" alt="bit-flipping" width="500" height="300" style="margin-left: auto; margin-right: auto; display: block;">
+<img src="/assets/img/training.webp" alt="bit-flipping" width="500" height="300" style="margin-left: auto; margin-right: auto; display: block;">
 <figure>
   <figcaption style='text-align: center'>Figure 4. Training of stochastic model in Stochastic MuZero. Here for a given trajectory of length 2 with observations $o_{≤t:t+2}$, actions $a_{t:t+2}$, value targets $z_{t:t+2}$, policy targets $π_{t:t+2}$ and rewards $u_{t+1:t+K}$, the model is unrolled for 2 steps. </figcaption>
 </figure>
@@ -81,7 +81,7 @@ This paper focuses on the limitation of MuZero that it can not be applied to act
 
 The proposed method is to sample a subset of actions for the search and the training:
 
-<img src="/images/sampled-muzero-improvement.webp" alt="bit-flipping" width="500" height="300" style="margin-left: auto; margin-right: auto; display: block;">
+<img src="/assets/img/sampled-muzero-improvement.webp" alt="bit-flipping" width="500" height="300" style="margin-left: auto; margin-right: auto; display: block;">
 <figure>
   <figcaption style='text-align: center'>Figure 5. On the left, the current policy π(a|s). Next, K actions are sampled from a proposal distribution β and βˆ(a|s) is the corresponding empirical distribution. A sample-based improved policy Iˆβπ(a|s) = (βˆ/β)(a|s)f(s,a,Zˆβ(s)) is then built. As the number of samples K increases Iˆβπ(a|s) converges to the improved policy Iπ(a|s). </figcaption>
 </figure>
