@@ -147,6 +147,11 @@ ninja.data = [{
           description: "TA for IEOR E4004. Topics included linear, nonlinear, integer, and dynamic programming.",
           section: "Teaching",handler: () => {
               window.location.href = "/teaching/2023-spring-optimization";
+            },},{id: "teaching-ta-big-data-in-transportation",
+          title: 'TA: Big Data in Transportation',
+          description: "TA for CIEN E4011. Topics included high-performance computing with JAX, Google Cloud Platform, machine learning fundamentals, and model interpretability.",
+          section: "Teaching",handler: () => {
+              window.location.href = "/teaching/2025-spring-big-data";
             },},{
         id: 'social-email',
         title: 'email',
