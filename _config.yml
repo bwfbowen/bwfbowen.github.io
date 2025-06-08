@@ -141,6 +141,8 @@ collections:
     output: true
   projects:
     output: true
+  teaching:
+    output: true
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -212,6 +214,11 @@ defaults:
       type: "news"
     values:
       layout: "post"
+  - scope:
+      path: ""
+      type: "teaching"
+    values:
+      layout: "teaching"
   - scope:
       path: "assets"
     values:
