@@ -8,10 +8,6 @@ profile:
   align: right
   image: bwf.JPG
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>Ph.D. Student</p>
-    <p>Data Science Institute, School of Engineering and Applied Science</p>
-    <p>Columbia University</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -29,6 +25,9 @@ latest_posts:
 
 I am a Ph.D. student at Columbia University, where I work with Data Science Institute (Smart Cities Center). I develop scalable systems and RL-based agentic reasoning frameworks for stochastic, continuous environments with complex topological constraints. My research interests span reinforcement learning, agentic AI, multimodal reasoning (LLM/VLM), systems resilience, and optimization.
 
+Previously, I interned at AWS AI Labs as an Applied Scientist.
+
 I hold an M.S. in Operations Research from Columbia University and a Bachelor in Big Data Management and Applications, minor in Economics from Peking University. 
 
 This website serves as a central hub for my publications, projects, and professional activities.
+
