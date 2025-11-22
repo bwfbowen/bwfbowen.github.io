@@ -10,7 +10,7 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Ph.D. Student</p>
-    <p>School of Engineering and Applied Science</p>
+    <p>Data Science Institute, School of Engineering and Applied Science</p>
     <p>Columbia University</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
@@ -27,7 +27,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a Ph.D. student at Columbia University's School of Engineering and Applied Science, where my research focuses on Reinforcement Learning and Autonomous Driving.
+I am a Ph.D. student at Columbia University, where I work with Data Science Institute (Smart Cities Center). I develop scalable systems and RL-based agentic reasoning frameworks for stochastic, continuous environments with complex topological constraints. My research interests span reinforcement learning, agentic AI, multimodal reasoning (LLM/VLM), systems resilience, and optimization.
 
 I hold an M.S. in Operations Research from Columbia University and a Bachelor in Big Data Management and Applications, minor in Economics from Peking University. 
 

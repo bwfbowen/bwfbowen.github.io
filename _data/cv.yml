@@ -35,59 +35,56 @@
 - title: Industry Experience
   type: time_table
   contents:
-    - title: Applied Scientist
-      institution: AWS, New York, NY
+    - title: Applied Scientist Intern
+      institution: AWS AI Lab, Amazon, New York, NY
       year: "May 2025 - Aug 2025"
       description:
         - "Training efficiency and stability of LLM"
+    - title: Graduate Researcher
+      institution: Data Science Institute, Columbia University, New York, NY
+      year: "Aug 2024 - Present"
+      description:
+        - "Conducting research on scalable systems and RL-based agentic reasoning."
     - title: Part-time Data Scientist
       institution: MathWorks, New York, NY
       year: "Aug 2022 - Dec 2022"
       description:
-        - "Reproduced Dynamic Programming for Goal-based Wealth Management, developed 4 reward signals, devised experiments with 6 model-free agents to discover the best algorithm"
-        - "Achieved an increase of success rate from 41% to 61%, compared to Q-Learning baseline, the success rate is -0.07 from theoretical best probability. A blog with code was published officially and added into MATLAB toolbox"
-    - title: Machine Learning Research Engineer Intern
+        - "Developed RL algorithms for goal-based wealth management."
+    - title: Research Engineer Intern
       institution: AI TOPIA, Beijing, China
       year: "Sep 2021 - Jun 2022"
       description:
-        - "Proposed learning algorithms to optimize execution cost for intraday order placement optimization. Implemented 5 model-free algorithms and a high frequency trading environment"
-        - "Utilized advanced models including DeepLOB and XGBoost to improve the short-term prediction. Realized on average 2-ticks better price for tick-level order placement"
-    - title: Quant Analyst Intern
-      institution: Nomura Orient International Securities, Shanghai, China
+        - "Optimized intraday order placement using ML and RL algorithms."
+    - title: Data Scientist Intern
+      institution: Nomura, Shanghai, China
       year: "Jul 2021 - Sep 2021"
       description:
-        - "Perfected our FOF website platform. Built dashboard and SQL database for metrics include style and systematic risk"
-        - "Realized a new feature in MongoDB and a web crawler, which has been added to the department's core codebase"
+        - "Built FOF platform features, dashboards, and databases."
     - title: Data Scientist, Intern
       institution: Deloitte, Beijing, China
       year: "Aug 2020 - Oct 2020"
       description:
-        - "Completed a web crawler project and automatically produced formatted excel spreadsheet weekly"
-        - "Collaborated with data scientists on the interactive data visualization, preprocessed fundamental data for business intelligence dashboard products"
+        - "Automated data collection and supported BI dashboard development."
 
 - title: Project Experience
   type: time_table
   contents:
+    - title: "VeRL-Tune"
+      institution: "New York, NY"
+      year: "2025 - Present"
+      description:
+        - "Scalable HPO and evaluation pipeline integrating VeRL with Ray Tune for agentic RL/LLM reasoning"
     - title: "SINA: Seamless, Intelligent Navigation Anywhere"
-      institution: "NY, United States"
-      year: 
+      institution: "New York, NY"
+      year: "2024 - Present"
       description:
-        - "Winner of CS3 VALIDATE Accelerator program, received initial funding and continued funding."
-    - title: "Python Open-source Library Muax"
-      institution: "NY, United States"
-      year:
+        - "Offline indoor AR evacuation system requiring no network, Bluetooth, or stored maps on the Phone"
+        - "Winner of CS3 VALIDATE Accelerator program"
+    - title: "Muax"
+      institution: "New York, NY"
+      year: "2023 - Present"
       description:
-        - "Implemented variants of MuZero with JAX/TensorFlow, supported distributed RL and distributed training"
-        - "Integrated with DeepMind's Acme framework, compared MCTS search policies on Open Spiel multi-agent games (e.g., Go)"
-    - title: "SLAMuZero"
-      institution: "NY, United States"
-      year:
-      description:
-        - "Enhanced MuZero perception with SLAM for embodied AI, experiment on Meta's Habitat simulator"
-        - "Realized comparable performance for indoor exploration tasks on Gibson dataset, with better sample efficiency"
-    - title: "LLM Agent Navigation in VR Unity"
-      institution: "NY, United States"
-      year:
+        - "JAX/TF MuZero implementation bridging DeepMind's MCTX with Acme"
 
 - title: Presentations
   type: time_table
@@ -102,9 +99,13 @@
 - title: Honors and Awards
   type: time_table
   contents:
+    - year: 2025
+      items:
+        - "CS3 VALIDATE Accelerator Winner"
+        - "NSF I-Corps Travel Grant"
     - year: 2024
       items:
-        - Calatrava Family Fellowship
+        - "Calatrava Family Fellowship"
 
 - title: Professional Service
   type: nested_list
@@ -122,30 +123,30 @@
   type: time_table
   contents:
     - title: Teaching Assistant
-      institution: IEOR department, Columbia University, New York, NY
+      institution: Columbia University, New York, NY
+      year: 2025
+      description:
+        - "CIEN E4011 Big Data in Transportation: Graduate course on large-scale transportation data and modern ML tools (JAX, Google Cloud, etc.)"
+    - title: Teaching Assistant
+      institution: IEOR Department, Columbia University, New York, NY
       year: 2023
       description:
-        - "Graduate Optimization Models and Methods (IEOR E4004) instructed by Cedric Josz"
-        - "Self-motivated to enhance final project on Moving Object Detection, created sample videos and code templates for quick start"
+        - "IEOR E4004 Optimization Models and Methods: Graduate course on linear, integer, nonlinear, and dynamic programming"
 
 - title: Technical Skills
   type: nested_list
   contents:
-    - title: Programming
+    - title: Languages
       items:
-        - "Python, SQL, C++, C#, Java, MATLAB"
-    - title: Development
+        - "Python, C++, SQL, MATLAB"
+    - title: ML & RL
       items:
-        - "HTML/CSS, JavaScript, Unity, XCode"
-    - title: Machine Learning
+        - "JAX, PyTorch, TensorFlow, Hugging Face, vLLM"
+        - "VeRL, Ray/RLlib, Acme, mctx, OpenSpiel"
+    - title: Data & Infra
       items:
-        - "JAX, PyTorch, TensorFlow, MuZero, Acme, OpenCV, LLM"
-    - title: Data Science
+        - "NumPy, Pandas, SciPy, scikit-learn, XGBoost, Apache Spark"
+        - "Docker, Kubernetes, Slurm, Airflow"
+    - title: Cloud & Tools
       items:
-        - "Apache Spark, Docker, Airflow, MongoDB, Pandas, NumPy, SciPy"
-    - title: Cloud Computing
-      items:
-        - "AWS, GCP"
-    - title: Others
-      items:
-        - "Git, LaTeX, Linux, iOS"
+        - "AWS, GCP, Linux, Git"
