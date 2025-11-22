@@ -37,6 +37,7 @@
       "name": "AWS AI Lab, Amazon",
       "position": "Applied Scientist Intern",
       "url": "https://www.amazon.science/author/bowen-fang",
+      "location": "New York, NY",
       "startDate": "2025-05-01",
       "endDate": "2025-08-01",
       "summary": "",
@@ -55,6 +56,7 @@
       "name": "MathWorks",
       "position": "Part-time Data Scientist",
       "url": "https://blogs.mathworks.com/finance/2023/08/22/reinforcement-learning-as-your-portfolio-advisor/",
+      "location": "New York, NY",
       "startDate": "2022-08-01",
       "endDate": "2022-12-01",
       "summary": "",
@@ -63,6 +65,7 @@
     {
       "name": "AI TOPIA",
       "position": "Research Engineer Intern",
+      "location": "Beijing",
       "url": "",
       "startDate": "2021-09-01",
       "endDate": "2022-06-01",
@@ -72,6 +75,7 @@
     {
       "name": "Nomura",
       "position": "Data Scientist Intern",
+      "location": "Shanghai",
       "url": "https://www.nomura.com/",
       "startDate": "2021-07-01",
       "endDate": "2021-09-01",
@@ -82,6 +86,7 @@
       "name": "Deloitte",
       "position": "Data Scientist Intern",
       "url": "https://www.deloitte.com/",
+      "location": "Beijing",
       "startDate": "2020-08-01",
       "endDate": "2020-10-01",
       "summary": "",
@@ -109,7 +114,7 @@
     },
     {
       "institution": "Peking University, Beijing, China",
-      "area": "Big Data Management and Applications",
+      "area": "Big Data Management and Applications, Minor in Economics",
       "studyType": "Bachelor",
       "startDate": "2018-09",
       "endDate": "2022-07",
@@ -121,19 +126,19 @@
     {
       "title": "CS3 VALIDATE Accelerator Winner",
       "date": "2025",
-      "awarder": "Columbia University",
+      "awarder": "",
       "summary": ""
     },
     {
       "title": "NSF I-Corps Travel Grant",
       "date": "2025",
-      "awarder": "National Science Foundation",
+      "awarder": "",
       "summary": ""
     },
     {
       "title": "Calatrava Family Fellowship",
       "date": "2024",
-      "awarder": "Columbia University",
+      "awarder": "",
       "summary": "",
       "url": "https://calatrava.com/"
     }
